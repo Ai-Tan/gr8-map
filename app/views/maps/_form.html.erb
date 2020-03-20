@@ -1,0 +1,16 @@
+<%= form_with model: map, local:true do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_area :name, class: "form-control", rows: "1" %>
+    <%= f.label :type %>
+    <%= f.text_area :type, class: "form-control", rows: "1" %>
+    <%= f.label :photo1 %>
+    <%= f.text_area :photo1, class: "form-control", rows: "1" %>
+  </div>
+  <p>
+    <%= f.submit class: "btn btn-block btn-primary" %>
+  </p>
+  <p>
+    <%= link_to '戻る', :back, class: "btn btn-block btn-secondary" %>
+  </p>
+<% end %>
