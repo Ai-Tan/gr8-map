@@ -19,7 +19,7 @@ class MapsController < ApplicationController
   private
 
   def map_params # ストロングパラメータを定義する
-    params.require(:map).permit(:name, :type, :price, :closing_day, :open_time, :close_time, :website, :photo1, :photo2, :photo3, :beji, :tel, :parking, :address)
+    params.require(:map).permit(:name, :type, :image,)
   end
 
 end
