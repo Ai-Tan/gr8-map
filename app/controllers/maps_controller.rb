@@ -1,6 +1,6 @@
 class MapsController < ApplicationController
   def index
-    @maps = Map.all
+    @maps = Map.order(created_at: :desc)
   end
   
   def new
@@ -19,11 +19,24 @@ class MapsController < ApplicationController
     @map = Map.find(params[:id])
   end
 
+  def edit
+    @map = Map.find(params[:id])
+  end
+
+  def update
+    @map = Map.find(params[:id])
+    if @map.update(map_params)
+      redirect_to @map, notice: "投稿を更新しました。"
+    else
+      render :edit
+    end
+  end
+
 
   private
 
   def map_params # ストロングパラメータを定義する
-    params.require(:map).permit(:name, :type, :price, :closing_day, :open_time, :close_time, :website, :beji, :tel, :parking, :address, images: [])
+    params.require(:map).permit(:name, :type, :price, :closing_day, :open_time, :close_time, :website, :beji, :tel, :parking, :address, :chizu, images: [])
   end
 
 end

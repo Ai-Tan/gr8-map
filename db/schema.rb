@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2020_03_20_123500) do
     t.string "tel"
     t.boolean "parking"
     t.text "address"
+    t.text "chizu"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

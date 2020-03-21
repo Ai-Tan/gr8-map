@@ -1,40 +1,51 @@
-<div class="col-lg-8 mx-auto">
+<div class="col-lg-10 mx-auto">
   <div class="card mb-3">
     <div class="row no-gutters">
       <div class="col-lg-7">
-        <% if @map.images.attached? %>
-          <% @map.images.each do |image|%>
-            <%= image_tag image.variant(resize_to_fill: [800, 800]).processed, class: "card-img" %>
+        <div class="overflow-auto" style="width:550px; height:600px;">
+          <% if @map.images.attached? %>
+            <% @map.images.each do |image|%>
+              <%= image_tag image.variant(resize_to_fill: [800, 800]).processed, class: "card-img" %>
+            <% end %>
+          <% else %>
+            <%= image_tag "no_image", class: "card-img" %>
           <% end %>
-        <% else %>
-          <%= image_tag "no_image", class: "card-img" %>
-        <% end %>
+        </div>
       </div>
       <div class="col-lg-5">
         <div class="card-body scroll">
-          <p>店名 : <%= @map.name %></p>
-          種類 : <%= @map.type %> <br>
-          定休日 : <%= @map.closing_day %><br>
-          開店時間 : <%= @map.open_time.strftime('%H:%M') %><br>
-          閉店時間 : <%= @map.close_time.strftime('%H:%M') %><br>
-          ホームページ : <%= @map.website %><br>
-          ベジタリアン料理対応 : 
+          <h3>&nbsp; <%= @map.name %></h3>
+          &nbsp; &nbsp; 種類 : <%= @map.type %> <br>
+          &nbsp; &nbsp; 定休日 : <%= @map.closing_day %><br>
+          &nbsp; &nbsp; 開店時間 : <%= @map.open_time.strftime('%H:%M') %><br>
+          &nbsp; &nbsp; 閉店時間 : <%= @map.close_time.strftime('%H:%M') %><br>
+          &nbsp; &nbsp; ホームページ : <%= @map.website %><br>
+          &nbsp; &nbsp; ベジタリアン料理対応 : 
           <% if @map.beji == true %>
             ◯
             <% else %>
             ✕
           <% end %> <br>
-          電話番号 : <%= @map.tel %><br>
-          駐車場 : 
+          &nbsp; &nbsp; 電話番号 : <%= @map.tel %><br>
+          &nbsp; &nbsp; 駐車場 : 
           <% if @map.parking == true %>
             あり
             <% else %>
             なし
           <% end %> <br>
-          住所 : <%= @map.address %><br>
+          &nbsp; &nbsp; 住所 : <%= @map.address %><br>
           
+          <p>
+          <div class="col-md-3">
+          <iframe src=<%= @map.chizu %> height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+          </p>
+
         </div>
       </div>
     </div>
   </div>
+  <p>
+    <%= link_to "編集", edit_map_path(@map), class: "btn btn-block btn-primary" %>
+  </p>
 </div>

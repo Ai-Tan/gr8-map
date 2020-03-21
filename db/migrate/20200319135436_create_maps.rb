@@ -12,6 +12,7 @@ class CreateMaps < ActiveRecord::Migration[6.0]
       t.string :tel
       t.boolean :parking
       t.text :address
+      t.text :chizu
 
       t.timestamps
     end
