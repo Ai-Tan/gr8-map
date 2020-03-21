@@ -1,3 +1,30 @@
-<p>
-  <%= image_tag @map.image_url %>
-</p>
+<div class="col-lg-8 mx-auto">
+  <div class="card mb-3">
+    <div class="row no-gutters">
+      <div class="col-lg-7">
+        <% if @map.images.attached? %>
+          <% @map.images.each do |image|%>
+            <%= image_tag image.variant(resize_to_fill: [800, 800]).processed, class: "card-img" %>
+          <% end %>
+        <% else %>
+          <%= image_tag "no_image", class: "card-img" %>
+        <% end %>
+      </div>
+      <div class="col-lg-5">
+        <div class="card-body scroll">
+          <p>店名 : <%= @map.name %></p>
+          種類 : <%= @map.type %> <br>
+          定休日 : <%= @map.closing_day %><br>
+          開店時間 : <%= @map.open_time.strftime('%H:%M') %><br>
+          閉店時間 : <%= @map.close_time.strftime('%H:%M') %><br>
+          ホームページ : <%= @map.website %><br>
+          ベジ料理対応 : <%= @map.beji %><br>
+          電話番号 : <%= @map.tel %><br>
+          駐車場 : <%= @map.parking %><br>
+          住所 : <%= @map.address %><br>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

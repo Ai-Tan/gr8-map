@@ -8,9 +8,6 @@ class CreateMaps < ActiveRecord::Migration[6.0]
       t.time :open_time
       t.time :close_time
       t.text :website
-      t.text :photo1
-      t.text :photo2
-      t.text :photo3
       t.boolean :beji
       t.integer :tel
       t.boolean :parking
