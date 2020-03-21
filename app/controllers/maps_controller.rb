@@ -1,4 +1,8 @@
 class MapsController < ApplicationController
+  def index
+    @maps = Map.all
+  end
+  
   def new
     @map = Map.new # フォーム用の空のインスタンスを生成する。
   end

@@ -1,0 +1,23 @@
+<div class="col-6 mx-auto">
+  <% @maps.each do |map| %>
+    <div class="card mb-5">
+      <div class="row no-gutters">
+        <div class="col-lg-7">
+          <%= link_to map do %>
+            <!-- image_magickのメソッドを使用して画像サイズを変更して表示 -->
+            <% if map.images.attached? %>
+              <%= image_tag map.images.first.variant(resize_to_fill: [800, 800]).processed, class: "card-img"  %>
+            <% else %>
+              <%= image_tag "no_image", class: "card-img" %>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="col-lg-5">
+          <div class="card-text">
+            <p><%= truncate(map.name, length: 90) %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
