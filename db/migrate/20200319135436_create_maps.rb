@@ -9,7 +9,7 @@ class CreateMaps < ActiveRecord::Migration[6.0]
       t.time :close_time
       t.text :website
       t.boolean :beji
-      t.integer :tel
+      t.string :tel
       t.boolean :parking
       t.text :address
 

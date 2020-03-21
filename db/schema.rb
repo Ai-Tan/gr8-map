@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2020_03_20_123500) do
     t.time "close_time"
     t.text "website"
     t.boolean "beji"
-    t.integer "tel"
+    t.string "tel"
     t.boolean "parking"
     t.text "address"
     t.datetime "created_at", precision: 6, null: false

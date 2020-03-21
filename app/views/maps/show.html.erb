@@ -18,9 +18,19 @@
           開店時間 : <%= @map.open_time.strftime('%H:%M') %><br>
           閉店時間 : <%= @map.close_time.strftime('%H:%M') %><br>
           ホームページ : <%= @map.website %><br>
-          ベジ料理対応 : <%= @map.beji %><br>
+          ベジタリアン料理対応 : 
+          <% if @map.beji == true %>
+            ◯
+            <% else %>
+            ✕
+          <% end %> <br>
           電話番号 : <%= @map.tel %><br>
-          駐車場 : <%= @map.parking %><br>
+          駐車場 : 
+          <% if @map.parking == true %>
+            あり
+            <% else %>
+            なし
+          <% end %> <br>
           住所 : <%= @map.address %><br>
           
         </div>

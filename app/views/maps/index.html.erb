@@ -14,7 +14,11 @@
         </div>
         <div class="col-lg-5">
           <div class="card-text">
-            <p><%= truncate(map.name, length: 90) %></p>
+            <p>店名 : <%= map.name %></p>
+            種類 : <%= map.type %> <br>
+            定休日 : <%= map.closing_day %><br>
+            開店時間 : <%= map.open_time.strftime('%H:%M') %><br>
+            閉店時間 : <%= map.close_time.strftime('%H:%M') %><br>
           </div>
         </div>
       </div>
