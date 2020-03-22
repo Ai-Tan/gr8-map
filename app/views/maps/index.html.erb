@@ -1,4 +1,4 @@
-<div class="col-6 mx-auto">
+<div class="col-8">
   <% @maps.each do |map| %>
     <div class="card mb-5">
       <div class="row no-gutters">
@@ -24,4 +24,20 @@
       </div>
     </div>
   <% end %>
+</div>
+<div class="col-4">
+  <div class="card mb-5" >
+    <div class="card-text text-center border-bottom">
+    <i class="far fa-heart"></i>
+    春のおすすめメニュー
+    <i class="far fa-heart"></i>
+    </div>
+    <div class="card-text">
+
+    <%= image_tag "sweets_mille_feuille_mirufiyu_ichigo", class: "card-img" %>
+    <%= image_tag "food_ratatouille", class: "card-img" %>
+    <%= image_tag "food_ja-ja-men", class: "card-img" %>
+    </div>
+  </div>
+
 </div>
