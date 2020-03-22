@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  price: 1
+  closing_day: MyString
+  open_time: 2020-03-19 22:54:36
+  close_time: 2020-03-19 22:54:36
+  website: MyText
+  photo1: MyText
+  photo2: MyText
+  photo3: MyText
+  beji: false
+  tel: 1
+  parking: false
+  address: MyText
+
+two:
+  name: MyString
+  type: 
+  price: 1
+  closing_day: MyString
+  open_time: 2020-03-19 22:54:36
+  close_time: 2020-03-19 22:54:36
+  website: MyText
+  photo1: MyText
+  photo2: MyText
+  photo3: MyText
+  beji: false
+  tel: 1
+  parking: false
+  address: MyText

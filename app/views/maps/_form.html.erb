@@ -1,0 +1,39 @@
+<%= form_with model: map, local:true do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control", rows: "1" %>
+    <%= f.label :type %>
+    <%= f.text_field :type, class: "form-control", rows: "1" %>
+    <%= f.label :price %>
+    <%= f.number_field :price, class: "form-control", rows: "1" %>
+    <%= f.label :closing_day %>
+    <%= f.text_field :closing_day, class: "form-control", rows: "1" %>
+    <%= f.label :open_time %>
+    <%= f.text_field :open_time, class: "form-control", rows: "1" %>
+    <%= f.label :close_time %>
+    <%= f.text_field :close_time, class: "form-control", rows: "1" %>
+    <%= f.label :website %>
+    <%= f.text_area :website, class: "form-control", rows: "1" %>
+    <%= f.label :beji %>
+    <%= f.check_box :beji, class: "form-control", rows: "1" %>
+    <%= f.label :tel %>
+    <%= f.text_field :tel, class: "form-control", rows: "1" %>
+    <%= f.label :parking %>
+    <%= f.check_box :parking, class: "form-control", rows: "1" %>
+    <%= f.label :address %>
+    <%= f.text_area :address, class: "form-control", rows: "1" %>
+    <%= f.label :chizu %>
+    <%= f.text_area :chizu, class: "form-control", rows: "1" %>
+    
+  </div>
+<div class="form-group">
+    <%= f.label :images %>
+    <%= f.file_field :images, class: "form-control", multiple: true %>
+  </div>
+  <p>
+    <%= f.submit class: "btn btn-block btn-primary" %>
+  </p>
+  <p>
+    <%= link_to '戻る', :back, class: "btn btn-block btn-secondary" %>
+  </p>
+<% end %>

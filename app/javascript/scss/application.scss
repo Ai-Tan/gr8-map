@@ -1,0 +1,16 @@
+@import '~bootstrap/scss/bootstrap';
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+
+.logo {
+  font-family: "Nico Moji";
+  font-size: 2rem;
+}
+
+.card-text {
+  padding: 20px 20px 20px 20px;
+  font-family: "Nico Moji";
+}
+
+.card-text.border-bottom {
+  background-color: #fff0f5;
+}
